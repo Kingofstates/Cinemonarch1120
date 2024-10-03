@@ -1,39 +1,37 @@
-/* Basic reset for consistency */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
 }
 
 header {
-    background-color: #444;
-    color: white;
-    padding: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
+}
+
+section {
+    padding: 20px;
 }
 
 .movie-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+    display: flex; /* This allows for a responsive layout */
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 20px; /* Adds space between the movie items */
 }
 
-.movie-grid div {
-    background-color: white;
+.movie {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    width: 200px; /* Set a fixed width for movie blocks */
 }
 
-footer {
-    text-align: center;
-    margin-top: 20px;
+.movie img {
+    max-width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 5px; /* Optional rounded corners */
 }
